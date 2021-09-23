@@ -1,3 +1,4 @@
+//WAP to create a linked list with 5 elements and display it
 #include<iostream.h>
 #include<conio.h>
 #include<malloc.h>
