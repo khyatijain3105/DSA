@@ -19,7 +19,7 @@ void display()
         cout<<"\t"<<stack[i];
     }
 }
-void push(int val)                   //push should satisfy the condition of stack being full.
+void push(int val)                   //push condition
 {
     if (TOP==SIZE-1)
     cout<<"\n Stack is now full";
@@ -30,7 +30,7 @@ void push(int val)                   //push should satisfy the condition of stac
     }
 }
 
-int pop()
+int pop()                             //pop condition 
 {
     if(TOP==-1)
     cout<<"\n Stack is Empty, no element to pop";
@@ -45,7 +45,7 @@ int pop()
 int main()
 { 
     int t;
-    display();
+    display();                     // to display/print the inserted elements
     push(3105);
     push(7005);
     push(7421);
@@ -64,6 +64,6 @@ int main()
     cout<<"\n Element popped:"<<t;
     t=pop();
 
-    display();
+    display();                     // to display/print the popped elements 
 	return 0;
 }
