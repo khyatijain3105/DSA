@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+#define SIZE 5
+
+int queue[SIZE];
+int front=0,rear=0;
+//Insertion in queue called Enqueue
+int Enqueue(int val)
+{
+    if (rear==SIZE)  //first check if queue is full
+    {
+    cout<<"\n Queue is full, no insertion possible"; 
+    return 0;
+    }
+    else 
+    {
+        rear==rear+1; //increment the rear
+        queue[rear]=val; //index-> rear val->value
+        cout<<"\n One element is added to queue";
+        if (front==0)
+        front++;
+        return val;
+    }
+}
+
+int Dequeue()
+{
+    if (front==0)
+    cout<<"\n Queue is empty";
+    else
+    {
+        int tm=queue[front];
+        if(front==SIZE)
+        cout<<"\n Queue is Empty";
+        front=front+1;
+        return tm;
+    }
+}
+
+void display()
+{
+    if(front==rear)
+    cout<<"\n Queue is empty";
+    else
+    {
+        int temp=front;
+        cout<<"\n";
+        for(int i=front;i<=rear;i++)
+        cout<<queue[i]<<"\t";
+    }
+}
+
+int main() {
+    int t;
+    t=Enqueue(100);
+    t=Enqueue(200);
+    t=Enqueue(300);
+    t=Enqueue(400);
+    t=Enqueue(500);
+    display();
+    t=Dequeue();
+    Dequeue();
+    Dequeue();
+    Dequeue();
+    t= Dequeue();
+    cout<<"\n Deleted element from Queue is: ";
+    cout<<t;
+	return 0;
+}
